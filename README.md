@@ -9,6 +9,9 @@ git clone https://github.com/Mox-Erit/elevator.git
 # change into repo directory
 cd elevator
 
+# Install dependencies with `pnpm install` (or `npm install` or `yarn`)
+pnpm install 
+
 ```
 
 ## Developing
