@@ -4,11 +4,10 @@
 
 ```bash
 # git clone REPO
-git clone REPO
-npm create svelte@latest
+git clone https://github.com/Mox-Erit/elevator.git
 
 # change into repo directory
-cd repo
+cd elevator
 
 ```
 
