@@ -11,7 +11,7 @@
     - Must be able to call the elevator to a floor
     - Animate the elevator whenever called to a new floor
     - Animate the doors opening and simulate time for passengers to embark / disembark
-    - 508 accessibility for buttons
+    - Make it as accessible as possible and check with WAVE tool.
 
     Additional features:
     - Fire department button
@@ -96,8 +96,18 @@ function openDoors() {
             <div class="btn-wrapper floor"><button  on:click={thirdFloor} aria-label="Go to the third floor" class="btn floor">3</button></div>
             <div class="btn-wrapper floor"><button on:click={emergencyServices} aria-label="Call emergency services" class="btn floor">!</button></div>
             <div class="btn-wrapper floor"><button  on:click={openDoors} aria-label="Go to open the doors" class="btn floor">Open</button></div>
-            <div class="btn-wrapper floor"><button  on:click={closeDoors} aria-label="Go to close the doors" class="btn floor">Close</button></div>
+            <div class="btn-wrapper floor"><button  on:click={closeDoors} aria-label="Go to close the doors" class="btn floor">Close</button></div>  
+            
+            
         </div>
+        <div class="music-container">
+            <audio class="audio" controls>
+                <source src="cisco_hold_opus_1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <p class="btn-wrapper floor text">Elevator Music</p>
+        </div>
+
     </div>
     <div class="door">
 
@@ -119,8 +129,20 @@ function openDoors() {
         display: flex;
         flex-direction: row;
     }
+    .text {
+        color: white;
+        font-size: 2rem;
+    }
+    .audio {
+        margin-bottom: 20px;
+    }
+    .music-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .container {
-        background-color: blue;
+        background-color: navy;
         width: 25vw;
         height: 100vh;
        position: fixed;
